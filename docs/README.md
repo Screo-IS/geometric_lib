@@ -57,6 +57,6 @@
   5
   ```
   ```
-  def perimetr(2,3,5)
-  10
+  def perimetr(2,3,4)
+  9
   ```
