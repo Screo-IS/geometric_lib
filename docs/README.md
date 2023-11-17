@@ -149,6 +149,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 5 , b = 5 | Тест должен заметить, что число больше 0 | 25 | Passed the test |
+| a = 5.2 , b = 5.2 | Тест должен заметить, что тип данных принимает значение float | 27.040000000000003 | Passed the test |
 | a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 2, b = 'b'  | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = True, b = 9 | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -158,6 +159,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 2 , b = 2 | Тест должен заметить, что число больше 0 | 8 | Passed the test |
+| a = 2.5 , b = 2.5 | Тест должен заметить, что тип данных принимает значение float | 10 | Passed the test |
 | a = 0 , b = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 'd' , b = 1 | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = 5, b = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -167,6 +169,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 10 | Тест должен заметить, что число больше 0 | 10 | Passed the test |
+| a = 5.2 | Тест должен заметить, что тип данных принимает значение float | 27.040000000000003 | Passed the test |
 | a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 'c' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -176,6 +179,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 5 | Тест должен заметить, что число больше 0 | 20 | Passed the test |
+| a = 5.2 | Тест должен заметить, что тип данных принимает значение float | 20.8 | Passed the test |
 | a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 'r' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -185,6 +189,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 3 , b = 2 | Тест должен заметить, что число больше 0 | 3.0 | Passed the test |
+| a = 3.2 , b = 2 | Тест должен заметить, что тип данных принимает значение float | 3.2 | Passed the test |
 | a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -194,6 +199,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 2, b = 3, c = 4 | Тест должен заметить, что число больше 0 | 9 | Passed the test |
+| a = 2.1 , b = 3.1 , c = 4.1 | Тест должен заметить, что тип данных принимает значение float | 9.3 | Passed the test |
 | a = -1, b = 5, c = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 'c' , b = 1, c = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = '1' , b = 2, c = '3' | Тест должен проверять основное свойство треугольника | incorrect input, the basic property of a triangle must be satisfied | Passed the test |
@@ -204,6 +210,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | r = 1 | Тест должен заметить, что число больше 0 | 3.141592653589793 | Passed the test |
+| r = 2.1 | Тест должен заметить, что тип данных принимает значение float | 13.854423602330987 | Passed the test |
 | r = -1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | r = 'a' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | r = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
@@ -213,6 +220,7 @@ def area(a):
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
 | a = 1 | Тест должен заметить, что число больше 0 | 6.283185307179586 | Passed the test |
+| r = 1.5 | Тест должен заметить, что тип данных принимает значение float | 9.42477796076938 | Passed the test |
 | a = -4 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
 | a = 'd' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
 | a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
