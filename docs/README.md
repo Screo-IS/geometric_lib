@@ -226,7 +226,7 @@ def area(a):
 | a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
 | a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
 > [!IMPORTANT]
-> **По результатам тестирования, тесты со всеми возможными входными данными успешно прошли проверку**
+> **Метрика: по результатам тестирования все тесты прохошли проверку (8/8, 100%)**
 
 ### Commit with unit tests
 ```
