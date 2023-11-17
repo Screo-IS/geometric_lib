@@ -144,16 +144,79 @@ def area(a):
 - Что должен учесть тест
 - Статусы тестирования.
 
-## Таблица тест-кейсов
+# Таблица тест-кейсов
+## Rectangle square
 | Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
 | ------------- | ------------- | -------------------------- | --------------------| 
-| Положительные числа | Тест должен заметить, что число больше 0 | "Ожидаемый результат" | Passed the test |
-| Неположительные числа | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
-| Отдельный тест для проверки сторон треугольника | Тест должен проверить, удовлетворяют ли стороны основному свойству треугольника | incorrect input, the basic property of a triangle must be satisfied | Passed the test |
-| Строка | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
-| Булевы значения | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
-| Пустое значение (Enter) | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+| a = 5 , b = 5 | Тест должен заметить, что число больше 0 | 25 | Passed the test |
+| a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 2, b = 'b'  | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = True, b = 9 | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' , b = 2 | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
 
+## Rectangle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 2 , b = 2 | Тест должен заметить, что число больше 0 | 8 | Passed the test |
+| a = 0 , b = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'd' , b = 1 | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = 5, b = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' , b = 4 | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Square square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 10 | Тест должен заметить, что число больше 0 | 10 | Passed the test |
+| a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'c' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Square perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 5 | Тест должен заметить, что число больше 0 | 20 | Passed the test |
+| a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'r' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Triangle square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 3 , b = 2 | Тест должен заметить, что число больше 0 | 3.0 | Passed the test |
+| a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Triangle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 2, b = 3, c = 4 | Тест должен заметить, что число больше 0 | 9 | Passed the test |
+| a = -1, b = 5, c = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'c' , b = 1, c = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = '1' , b = 2, c = '3' | Тест должен проверять основное свойство треугольника | incorrect input, the basic property of a triangle must be satisfied | Passed the test |
+| a = True, b = 1, c = 5 | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Circle square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| r = 1 | Тест должен заметить, что число больше 0 | 3.141592653589793 | Passed the test |
+| r = -1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| r = 'a' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| r = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| r = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Circle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 1 | Тест должен заметить, что число больше 0 | 6.283185307179586 | Passed the test |
+| a = -4 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'd' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
 > [!IMPORTANT]
 > **По результатам тестирования, тесты со всеми возможными входными данными успешно прошли проверку**
 
