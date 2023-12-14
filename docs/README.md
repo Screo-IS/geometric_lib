@@ -91,13 +91,151 @@ Comments added
 5fa279eb74bf27da59ed51e34ca03da1e80e0f44
 ```
 
-# Лабораторная работа по Unit tests №3
-## Таблица тест-кейсов
-| Входные данные  | Что должен учесть тест? | Ожидаемый результат |
-| ------------- | ------------- | -------------------------- |
-| Положительные числа | Тест должен заметить, что число больше 0 | "Ожидаемый результат" | 
-| Неположительные числа | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 |
-| Отдельный тест для проверки сторон треугольника | Тест должен проверить, удовлетворяют ли стороны основному свойству треугольника | incorrect input, the basic property of a triangle must be satisfied |
-| Строка | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters |
-| Булевы значения | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value |
-| Пустое значение (Enter) | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified |
+# Лабораторная работа по Unit tests №4
+
+## Отчет
+
+### 1.  Цели и задачи тестирования: 
+**Цели:**  <br />
+- Обнаружение ошибок в программном коде. 
+- Провести проверку на соответствие его с требованиями.
+- Оценить качество программного кода.
+  
+**Задачи:**  <br />
+- Найти входные данные, при которых программа будет ломаться
+- Написать условия проверки в каждой из функций, чтобы учитывать разные типы входных данных
+- Провести итоговое тестирование
+
+### 2.  Описание тестируемого продукта: 
+ **Продукт позволяет вычислять площадь и периметр таких геометрических фигур, как**
+ - Треугольник <br />
+ - Круг <br />
+ - Квадрат <br />
+ - Прямоугольник <br />
+ 
+### 3.  Область тестирования:
+- Тестирование будет проходить для функций, которые позволяют быстро вычислять площадь геометрических фигур. <br />
+
+**Пример исходной функции:**
+```
+def area(a):
+    return a * a
+```
+### 4.  Стратегия тестирования: 
+- С помощью ручного тестирования будут находиться случаи, которые недопустимы для работы с данными функциями.
+- После нахождения ошибочного выполнения программы будет создаваться unit test. <br />
+
+**Пример готовой функции:**
+```
+def area(a):
+    """функция принимает на вход число a, а потом при помощи формулы
+    S = a * a находит и возвращает площадь квадрата"""
+    if (a == '\n'):
+        return "length of side/sides not specified"
+    if isinstance(a, bool):
+        return 'incorrect input, input cannot be a boolean value'
+    if isinstance(a, str):
+        return 'incorrect input, input cannot contain letters'
+    if a <= 0:
+        return 'incorrect input, the input must contain numbers greater than 0'
+    return a * a
+```
+
+### 5.  Критерии приемки: 
+- Найдены ошибки при выполнении произвольных тестов.
+- Случаи с различными входными значениями добавлены в юнит тесты.
+- Функции имеют проверки, учитывающие некорректные входные данные.
+
+### 6.  Ожидаемые результаты: 
+- Информация о входных данных.
+- Что должен учесть тест
+- Статусы тестирования.
+
+# Таблица тест-кейсов
+## Rectangle square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 5 , b = 5 | Тест должен заметить, что число больше 0 | 25 | Passed the test |
+| a = 5.2 , b = 5.2 | Тест должен заметить, что тип данных принимает значение float | 27.040000000000003 | Passed the test |
+| a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 2, b = 'b'  | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = True, b = 9 | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' , b = 2 | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Rectangle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 2 , b = 2 | Тест должен заметить, что число больше 0 | 8 | Passed the test |
+| a = 2.5 , b = 2.5 | Тест должен заметить, что тип данных принимает значение float | 10 | Passed the test |
+| a = 0 , b = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'd' , b = 1 | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = 5, b = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' , b = 4 | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Square square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 10 | Тест должен заметить, что число больше 0 | 10 | Passed the test |
+| a = 5.2 | Тест должен заметить, что тип данных принимает значение float | 27.040000000000003 | Passed the test |
+| a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'c' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Square perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 5 | Тест должен заметить, что число больше 0 | 20 | Passed the test |
+| a = 5.2 | Тест должен заметить, что тип данных принимает значение float | 20.8 | Passed the test |
+| a = -5 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'r' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Triangle square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 3 , b = 2 | Тест должен заметить, что число больше 0 | 3.0 | Passed the test |
+| a = 3.2 , b = 2 | Тест должен заметить, что тип данных принимает значение float | 3.2 | Passed the test |
+| a = -1 , b = 1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Triangle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 2, b = 3, c = 4 | Тест должен заметить, что число больше 0 | 9 | Passed the test |
+| a = 2.1 , b = 3.1 , c = 4.1 | Тест должен заметить, что тип данных принимает значение float | 9.3 | Passed the test |
+| a = -1, b = 5, c = -10 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'c' , b = 1, c = 's' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = '1' , b = 2, c = '3' | Тест должен проверять основное свойство треугольника | incorrect input, the basic property of a triangle must be satisfied | Passed the test |
+| a = True, b = 1, c = 5 | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Circle square
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| r = 1 | Тест должен заметить, что число больше 0 | 3.141592653589793 | Passed the test |
+| r = 2.1 | Тест должен заметить, что тип данных принимает значение float | 13.854423602330987 | Passed the test |
+| r = -1 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| r = 'a' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| r = True | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| r = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+
+## Circle perimeter
+| Входные данные  | Что должен учесть тест? | Ожидаемый результат | Статус тестирования |
+| ------------- | ------------- | -------------------------- | --------------------| 
+| a = 1 | Тест должен заметить, что число больше 0 | 6.283185307179586 | Passed the test |
+| r = 1.5 | Тест должен заметить, что тип данных принимает значение float | 9.42477796076938 | Passed the test |
+| a = -4 | Тест должен заметить, что число меньше или равно 0 | incorrect input, the input must contain numbers greater than 0 | Passed the test |
+| a = 'd' | Тест должен заметить, что во входные значения входит строка | incorrect input, input cannot contain letters | Passed the test |
+| a = False | Тест должен заметить, во входных данных есть булевы значения | incorrect input, input cannot be a boolean value | Passed the test |
+| a = '\n' | Тест должен заметить, что входных данных не хвататет | length of side/sides not specified | Passed the test |
+> [!IMPORTANT]
+> **Метрика: по результатам тестирования все тесты прохошли проверку (8/8, 100%)**
+
+### Commit with unit tests
+```
+5dec96ec92530422887244e5e86486c21aef5643
+```
