@@ -1,0 +1,38 @@
+name: CICDlab
+
+on: [push]
+jobs:
+
+  CI_CD_lab-with-tests-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "This lab with unittests with ubuntu-latest, py3.10"
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          architecture: "x64"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
+      - name: Test with unittests
+        run:
+          python -m unittests
+
+  CI_CD_lab-with-tests-windows:
+    runs-on: Windows-latest
+    steps:
+      - name: echo
+        run: echo "This is lab with unittests on Windows, py3.10"
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          architecture: "x64"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
+      - name: Test with unittests
+        run:
+          python -m unittests

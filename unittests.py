@@ -7,6 +7,7 @@ import square
 class UnitTest(unittest.TestCase):
 
     def test_rectangle_area(self):
+        self.assertEqual(rectangle.area(5.2,5.2),27.040000000000003)
         self.assertEqual(rectangle.area(5,5),25)
         self.assertEqual(rectangle.area('\n', 1), "length of side/sides not specified")
         self.assertEqual(rectangle.area(-1,1),'incorrect input, the input must contain numbers greater than 0')
@@ -15,6 +16,7 @@ class UnitTest(unittest.TestCase):
 
 
     def test_rectangle_perimeter(self):
+        self.assertEqual(rectangle.perimeter(2.5,2.5), 10)
         self.assertEqual(rectangle.perimeter(2,2), 8)
         self.assertEqual(rectangle.perimeter('\n', 2), "length of side/sides not specified")
         self.assertEqual(rectangle.perimeter('a',0), 'incorrect input, input cannot contain letters')
@@ -22,6 +24,7 @@ class UnitTest(unittest.TestCase):
         self.assertEqual(rectangle.perimeter(True,0), 'incorrect input, input cannot be a boolean value')
 
     def test_circle_perimeter(self):
+        self.assertEqual(circle.perimeter(1.5), 9.42477796076938)
         self.assertEqual(circle.perimeter(1), 6.283185307179586)
         self.assertEqual(circle.perimeter('\n'), "length of side/sides not specified")
         self.assertEqual(circle.perimeter(-1), 'incorrect input, the input must contain numbers greater than 0')
@@ -30,6 +33,7 @@ class UnitTest(unittest.TestCase):
 
 
     def test_circle_area(self):
+        self.assertEqual(circle.area(2.1),13.854423602330987)
         self.assertEqual(circle.area(1),3.141592653589793)
         self.assertEqual(square.area('\n'), "length of side/sides not specified")
         self.assertEqual(circle.area(0),'incorrect input, the input must contain numbers greater than 0')
@@ -38,6 +42,7 @@ class UnitTest(unittest.TestCase):
 
 
     def test_square_area(self):
+        self.assertEqual(square.area(5.2), 27.040000000000003)
         self.assertEqual(square.area(10), 100)
         self.assertEqual(square.area('\n'), "length of side/sides not specified")
         self.assertEqual(square.area(-5), 'incorrect input, the input must contain numbers greater than 0')
@@ -46,6 +51,7 @@ class UnitTest(unittest.TestCase):
 
 
     def test_square_perimetr(self):
+        self.assertEqual(square.perimeter(5.2),20.8)
         self.assertEqual(square.perimeter(5),20)
         self.assertEqual(square.perimeter('\n'), "length of side/sides not specified")
         self.assertEqual(square.perimeter(-2), 'incorrect input, the input must contain numbers greater than 0')
@@ -53,6 +59,7 @@ class UnitTest(unittest.TestCase):
         self.assertEqual(square.perimeter(True), 'incorrect input, input cannot be a boolean value')
 
     def test_triangle_perimeter(self):
+        self.assertEqual(triangle.perimeter(2.1, 3.1, 4.1), 9.3)
         self.assertEqual(triangle.perimeter(2, 3, 4), 9)
         self.assertEqual(triangle.perimeter(5, 2, '\n'), "length of side/sides not specified")
         self.assertEqual(triangle.perimeter(3, 3, 0), 'incorrect input, the input must contain numbers greater than 0')
@@ -62,6 +69,7 @@ class UnitTest(unittest.TestCase):
 
 
     def test_triangle_area(self):
+        self.assertEqual(triangle.area(3.2, 2), 3.2)
         self.assertEqual(triangle.area(3, 2), 3.0)
         self.assertEqual(triangle.area(1,'\n'), "length of side/sides not specified")
         self.assertEqual(triangle.area(3, 0), 'incorrect input, the input must contain numbers greater than 0')
